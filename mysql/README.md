@@ -12,13 +12,12 @@ docker container start <container_id>
 docker ps
 ```
 
-Create a database 
+### Create books database 
 
 ```bash
 mysql -h 127.0.0.1 -P 3306 -u root -p
 mysql -h localhost -u root -p
 mysql -h 127.0.0.1 -P 3306 --protocol=tcp -u root -p
-```
 
 CREATE USER 'eshop' IDENTIFIED BY 'eshop13';
 grant all on *.* to 'eshop'@'%' identified by 'eshop13';
@@ -27,8 +26,9 @@ FLUSH PRIVILEGES;
 CREATE DATABASE books CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 show databases;
+```
 
-Create a database automatically 
+### Create a database automatically 
 
 docker run --name mysqleshop -p 3306:3306 \
 -e MYSQL_ROOT_PASSWORD=my-secret-pw \
