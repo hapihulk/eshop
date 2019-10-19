@@ -1,4 +1,4 @@
-package com.smash.bookservice;
+package com.eshop.bookservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

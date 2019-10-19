@@ -6,7 +6,9 @@ docker run --name mysqleshop -p 3306:3306 \
 ```
 
 ### Start one or more stopped containers
+```bash
 docker container start <container_id>
+```
 
 ### Check container running:
 ```bash

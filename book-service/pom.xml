@@ -9,14 +9,24 @@
 	<name>book-service</name>
 	<description>Book service</description>
 	<packaging>jar</packaging>
-
+	
 	<parent>
 		<groupId>com.eshop</groupId>
 		<artifactId>eshop</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
+	<properties>
+		<start-class>com.eshop.bookservice.BookServiceApplication</start-class>
+	</properties>
+
 	<dependencies>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -27,6 +37,16 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -36,6 +56,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<finalName>book-service</finalName>
+					<mainClass>com.eshop.bookservice.BookServiceApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
