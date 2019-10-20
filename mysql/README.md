@@ -7,6 +7,9 @@ docker run --name mysqleshop -p 3306:3306 \
 
 ### Start one or more stopped containers
 ```bash
+sudo netstat -nlpt | grep 3306
+sudo service mysql stop
+sudo docker ps -aqf "name=^mysqleshop$"
 docker container start <container_id>
 ```
 

@@ -36,8 +36,8 @@ public class BookServiceApplication {
 
 		List<Book> findAll = service.findAll();
 
-		for (Book person : findAll) {
-			System.out.println(person.getId() + ":" + person.getName());
+		for (Book book : findAll) {
+			System.out.println(book.getId() + ":" + book.name());
 		}
 
 	}
