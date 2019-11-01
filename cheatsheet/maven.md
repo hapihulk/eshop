@@ -1,3 +1,5 @@
+### Eclise project from pom
+mvn eclipse:clean eclipse:eclipse
 
 ### Effective POM = Super POM + Simplest POM   
 

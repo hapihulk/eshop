@@ -36,10 +36,7 @@
 	</dependencyManagement>
 
 	<modules>
-		<module>book-service</module>
-		<module>purchase-service</module>
-		<module>review-service</module>
-		<module>user-service</module>
+		<module>eshop-api</module>
 	</modules>
 
 	<repositories>
