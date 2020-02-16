@@ -1,4 +1,4 @@
-# document-service
+# auth-service
 
 ## Build
 ```bash
