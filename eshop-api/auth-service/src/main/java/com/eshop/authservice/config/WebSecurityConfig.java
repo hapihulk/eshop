@@ -11,10 +11,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
 import com.eshop.authservice.service.security.MongoUserDetailsService;
+import com.eshop.authservice.util.Constants;
 
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+	
 	@Autowired
 	private MongoUserDetailsService userDetailsService;
 
@@ -35,7 +37,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		// @formatter:off
 		auth.inMemoryAuthentication()
 			//.passwordEncoder(NoOpPasswordEncoder.getInstance())
-			.withUser("john").password("{noop}123456")
+			.withUser("john").password(Constants.NOOP_PASSWORD_ENCODE + "123456")
 			.roles("USER");
 		// @formatter:on
 		/*
